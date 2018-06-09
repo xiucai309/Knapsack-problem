@@ -40,7 +40,7 @@ int main(void)
 			}
 			else
 			{
-				PopBack(&stack, &p);					 //钮艠脣脻.
+				PopBack(&stack, &p);					 //回溯.
 				i = p;
 			}
 		}
@@ -53,3 +53,29 @@ int main(void)
 
 	return 0;
 }
+
+
+/*递归求解问题.
+void Bag_Question(Stack *pStack, int *allGoods, int index)
+{
+	int i, k, w;
+	for(i=index; i < 6; i++)
+	{
+		PushBack(pStack, i);
+		w = GetWeigh(pStack, allGoods);
+		if(w == 10)
+		{
+			print(pStack, allGoods);
+			PopBack(pStack, &k);
+		}
+		else if(w > 10)
+		{
+			PopBack(pStack, &k);
+		}
+		else
+		{
+			Bag_Question(pStack, allGoods, i+1);
+			PopBack(pStack, &k);
+		}
+	}
+}*/
